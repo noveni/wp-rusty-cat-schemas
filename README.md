@@ -12,6 +12,6 @@ Update your `theme-config.json` to include:
 
 ```json
 {
-	"$schema": ""
+ "$schema": "https://raw.githubusercontent.com/noveni/wp-rusty-cat-schemas/refs/heads/main/schemas/theme-config.json"
 }
 ```
