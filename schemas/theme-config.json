@@ -296,6 +296,16 @@
                             "description": "Replace the right arrow icon in the slider",
                             "type": "string",
                             "default": ">"
+                        },
+                        "style_src": {
+                            "description": "URL to the slider override style file",
+                            "type": "string",
+                            "default": "assets/css/blocks/supports/slider"
+                        },
+                        "script_src": {
+                            "description": "URL to the slider override script file",
+                            "type": "string",
+                            "default": "assets/js/blocks/supports/slider"
                         }
                     }
                 },
