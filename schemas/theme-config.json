@@ -1,0 +1,322 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Theme Configuration File",
+    "type": "object",
+    "properties": {
+        "$schema": {
+			"description": "JSON schema URI for theme-config.json.",
+			"type": "string"
+		},
+        "supports":{
+            "type": "object",
+            "properties": {
+                "admin": {
+                    "type": "object",
+                    "properties": {
+                        "duplicate_post": {
+                            "description": "Enable the duplicate post feature",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "replace_login_error": {
+                            "description": "Replace WP default login error messages, to avoid revealing if the username or password is incorrect",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "dashboard_welcome_panel": {
+                            "description": "Show the welcome panel on the dashboard",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "dashboard_site_health": {
+                            "description": "Show if the admin show the health dashboard",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "dashboard_right_now": {
+                            "description": "Show the right now widget on the dashboard",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "dashboard_activity": {
+                            "description": "Show the activity widget on the dashboard",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "dashboard_quick_press": {
+                            "description": "Show the quick press widget on the dashboard",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "dashboard_primary": {
+                            "description": "Show the primary widget on the dashboard",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "remove_admin_update_page": {
+                            "description": "Remove the update message in footer, the submenu Update and the update icon in the admin bar",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_settings_comments": {
+                            "description": "Remove the comments settings page in the General settings",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_tools": {
+                            "description": "Remove the Tools menu in the admin",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_tools_import": {
+                            "description": "Remove the Import submenu in the Tools menu",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_tools_export": {
+                            "description": "Remove the Export submenu in the Tools menu",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_tools_site_health": {
+                            "description": "Remove the Site Health submenu in the Tools menu",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_post": {
+                            "description": "Remove the Posts menu in the admin",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "remove_admin_ecrannoirblocks_settings": {
+                            "description": "Remove the Ecrannoir Blocks settings page in the admin(Ecranoir Blocks Plugin)",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_admin_footer_text": {
+                            "description": "Remove the Copyright footer text on admin",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "overwrite_admin_footer_text": {
+                            "description": "Overwrite the footer text on admin",
+                            "type": "string",
+                            "default": "Avec <a href=\"https://www.ecrannoir.be\" target=\"_blank\" rel=\"noopener noreferrer\">Ecran Noir</a> et <a href=\"https://www.tampala.be\" target=\"_blank\" rel=\"noopener noreferrer\">Tampala Studio</a>"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "cleaner": {
+                    "type": "object",
+                    "properties": {
+                        "head_clean": {
+                            "description": "Clean the head, removing unnecessary links and scripts, xmlrpc, pingbacks, emojis, feed, etc.",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "remove_jquery_migrate": {
+                            "description": "Remove jQuery Migrate script",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "comments": {
+                    "type": "object",
+                    "properties": {
+                        "disable_comments": {
+                            "description": "Remove comments features on the site",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "common": {
+                    "type": "object",
+                    "properties": {
+                        "allow_svg": {
+                            "description": "Allow SVG uploads",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "sanitize_filename": {
+                            "description": "Sanitize filenames on upload",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "editor": {
+                    "type": "object",
+                    "properties": {
+                        "disable_block_directory": {
+                            "description": "Disable the block directory in the editor",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "disable_pattern_directory": {
+                            "description": "Disable block patterns directory suggestions in the editor",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "disable_woocommerce_pattern": {
+                            "description": "Disable WooCommerce block patterns suggestions in the editor",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "disable_openverse": {
+                            "description": "Disable Media suggested to insert from block directory.",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "disable_post_template_editor": {
+                            "description": "Disable the post template editor in the editor",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "query": {
+                    "type": "object",
+                    "properties": {
+                        "join_taxonomy_in_post_search": {
+                            "description": "Join taxonomy terms in post search results",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "security": {
+                    "type": "object",
+                    "properties": {
+                        "prevent_clickjacking": {
+                            "description": "Prevent clickjacking attacks by setting X-Frame-Options header",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "disallow_file_editing": {
+                            "description": "Remove the ability to edit themes and plugins files from the admin",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "disallow_themes_plugins_install": {
+                            "description": "Remove the ability to install themes and plugins from the admin",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "features": {
+            "type": "object",
+            "properties": {
+                "show_coming_soon": {
+                    "description": "Enable coming soon page",
+                    "type": "boolean",
+                    "default": false
+                },
+                "openGraph": {
+                    "description": "Enable Open Graph meta tags",
+                    "type": ["boolean", "object"],
+                    "default": true,
+                    "properties": {
+                        "image": {
+                            "description": "Image to use for Open Graph meta tags",
+                            "type": "string",
+                            "default": ""
+                        },
+                        "site_name": {
+                            "description": "Site name to use for Open Graph meta tags",
+                            "type": "string",
+                            "default": ""
+                        },
+                        "title": {
+                            "description": "Title to use for Open Graph meta tags",
+                            "type": "string",
+                            "default": ""
+                        },
+                        "type": {
+                            "description": "Type to use for Open Graph meta tags",
+                            "type": "string",
+                            "default": ""
+                        },
+                        "description": {
+                            "description": "Description to use for Open Graph meta tags",
+                            "type": "string",
+                            "default": ""
+                        },
+                        "locale": {
+                            "description": "Locale to use for Open Graph meta tags",
+                            "type": "string",
+                            "default": ""
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "custom-settings-page": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable the custom settings page in the admin"
+        },
+        "editorSupports": {
+            "type": "object",
+            "properties": {
+                "inline-svg-image": {
+                    "description": "Enable inline SVG images supports in the editor",
+                    "type": "boolean",
+                    "default": false
+                },
+                "link": {
+                    "description": "Enable Link in the editor",
+                    "type": ["boolean"],
+                    "default": false
+                },
+                "slider": {
+                    "description": "Enable Slider in the editor",
+                    "type": ["boolean", "object"],
+                    "default": false,
+                    "properties": {
+                        "arrow_left": {
+                            "description": "Replace the left arrow icon in the slider",
+                            "type": "string",
+                            "default": "<"
+                        },
+                        "arrow_right": {
+                            "description": "Replace the right arrow icon in the slider",
+                            "type": "string",
+                            "default": ">"
+                        }
+                    }
+                },
+                "responsive-alignment": {
+                    "description": "Enable responsive alignment in the editor",
+                    "type": "boolean",
+                    "default": false
+                },
+                "responsive-columns": {
+                    "description": "Enable responsive columns in the editor",
+                    "type": "boolean",
+                    "default": false
+                },
+                "responsive-visibility": {
+                    "description": "Enable responsive visibility in the editor",
+                    "type": "boolean",
+                    "default": false
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}
