@@ -272,6 +272,11 @@
         "editorSupports": {
             "type": "object",
             "properties": {
+                "floating-image": {
+                    "description": "Enable floating image support in the editor",
+                    "type": "boolean",
+                    "default": false
+                },
                 "inline-svg-image": {
                     "description": "Enable inline SVG images supports in the editor",
                     "type": "boolean",
