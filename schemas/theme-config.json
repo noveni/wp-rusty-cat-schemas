@@ -260,6 +260,22 @@
                         }
                     },
                     "additionalProperties": false
+                },
+                "roles": {
+                    "description": "Enable roles management",
+                    "type": "object",
+                    "properties": {
+                        "managed_client": {
+                            "description": "Editeur Premium role - Customer with maintenance support",
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "autonomous_client": {
+                            "description": "Propriétaire du site role - Customer without maintenance support",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    }
                 }
             },
             "additionalProperties": false
