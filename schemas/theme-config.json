@@ -176,6 +176,75 @@
                             "description": "Disable the post template editor in the editor",
                             "type": "boolean",
                             "default": true
+                        },
+                        "clean_block_settings": {
+                            "description": "Restrict typography, border, spacing and color controls on common blocks (core/heading, core/buttons, core/button, core/paragraph, core/post-title). Requires the active theme to have a theme.json file.",
+                            "default": false,
+                            "oneOf": [
+                                {
+                                    "type": "boolean"
+                                },
+                                {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "description": "Block name (e.g. core/heading). Set to false to skip the block entirely, or provide an object to re-enable specific settings.",
+                                        "oneOf": [
+                                            {
+                                                "type": "boolean",
+                                                "enum": [false]
+                                            },
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "typography": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "fontFamilies":   { "type": ["array", "boolean"] },
+                                                            "customFontSize": { "type": "boolean" },
+                                                            "fontSizes":      { "type": ["array", "boolean"] },
+                                                            "fontStyle":      { "type": "boolean" },
+                                                            "fontWeight":     { "type": "boolean" },
+                                                            "lineHeight":     { "type": "boolean" },
+                                                            "letterSpacing":  { "type": "boolean" },
+                                                            "textDecoration": { "type": "boolean" },
+                                                            "textTransform":  { "type": "boolean" }
+                                                        },
+                                                        "additionalProperties": false
+                                                    },
+                                                    "border": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "radius": { "type": "boolean" },
+                                                            "style":  { "type": "boolean" },
+                                                            "width":  { "type": "boolean" },
+                                                            "color":  { "type": "boolean" }
+                                                        },
+                                                        "additionalProperties": false
+                                                    },
+                                                    "spacing": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "padding": { "type": "boolean" },
+                                                            "margin":  { "type": "boolean" }
+                                                        },
+                                                        "additionalProperties": false
+                                                    },
+                                                    "color": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "background": { "type": "boolean" },
+                                                            "link":       { "type": "boolean" },
+                                                            "text":       { "type": "boolean" }
+                                                        },
+                                                        "additionalProperties": false
+                                                    }
+                                                },
+                                                "additionalProperties": false
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     },
                     "additionalProperties": false
