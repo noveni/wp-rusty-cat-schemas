@@ -118,6 +118,11 @@
                             "description": "Remove jQuery Migrate script",
                             "type": "boolean",
                             "default": true
+                        },
+                        "plugin_google_xml_sitemaps": {
+                            "description": "Remove unwanted admin hooks added by the Google XML Sitemaps plugin (consent banner, beta notice, admin head/footer scripts)",
+                            "type": "boolean",
+                            "default": true
                         }
                     },
                     "additionalProperties": false
