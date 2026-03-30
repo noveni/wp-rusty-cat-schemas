@@ -380,6 +380,23 @@
             "default": true,
             "description": "Enable the custom settings page in the admin"
         },
+        "blocks": {
+            "description": "Enable Rusty Cat blocks. true = all blocks, array of slugs = specific blocks, false or [] = none.",
+            "oneOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": ["post-type-badge", "taxonomy-filter-block"]
+                    },
+                    "uniqueItems": true
+                }
+            ],
+            "default": false
+        },
         "editorSupports": {
             "type": "object",
             "properties": {
