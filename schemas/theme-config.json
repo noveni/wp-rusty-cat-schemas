@@ -456,6 +456,11 @@
                     "description": "Enable responsive visibility in the editor",
                     "type": "boolean",
                     "default": false
+                },
+                "cover-responsive-height": {
+                    "description": "Enable responsive min-height controls for core/cover blocks (mobile ≤ 600px, tablet 600–960px). Desktop is handled by the native min-height control.",
+                    "type": "boolean",
+                    "default": false
                 }
             },
             "additionalProperties": false
