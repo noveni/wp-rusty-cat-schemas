@@ -209,10 +209,15 @@
                                                             "fontSizes":      { "type": ["array", "boolean"] },
                                                             "fontStyle":      { "type": "boolean" },
                                                             "fontWeight":     { "type": "boolean" },
+                                                            "fluid":          { "type": "boolean" },
                                                             "lineHeight":     { "type": "boolean" },
                                                             "letterSpacing":  { "type": "boolean" },
                                                             "textDecoration": { "type": "boolean" },
-                                                            "textTransform":  { "type": "boolean" }
+                                                            "writingMode":    { "type": "boolean" },
+                                                            "textTransform":  { "type": "boolean" },
+                                                            "dropCap":        { "type": "boolean" },
+                                                            "textIndent":     { "type": "boolean" },
+                                                            "textColumns":    { "type": "boolean" }
                                                         },
                                                         "additionalProperties": false
                                                     },
