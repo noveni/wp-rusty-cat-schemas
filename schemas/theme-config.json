@@ -182,6 +182,11 @@
                             "type": "boolean",
                             "default": true
                         },
+                        "disable_font_library": {
+                            "description": "Disable the WordPress Font Library: hides the editor UI (Library + Upload tabs), unregisters all font collections (Google Fonts, etc.), and removes the WordPress 7.0 Appearance > Fonts admin page (menu link and direct URL access). Does not affect theme fonts (theme.json) or already-installed fonts.",
+                            "type": "boolean",
+                            "default": true
+                        },
                         "clean_block_settings": {
                             "description": "Restrict typography, border, spacing and color controls on common blocks (core/heading, core/buttons, core/button, core/paragraph, core/post-title). Requires the active theme to have a theme.json file.",
                             "default": false,
