@@ -150,6 +150,11 @@
                             "description": "Sanitize filenames on upload",
                             "type": "boolean",
                             "default": true
+                        },
+                        "svg_dimensions": {
+                            "description": "Fill in width/height for SVG attachments, read from the SVG root element",
+                            "type": "boolean",
+                            "default": true
                         }
                     },
                     "additionalProperties": false
@@ -271,6 +276,18 @@
                             "description": "Join taxonomy terms in post search results",
                             "type": "boolean",
                             "default": true
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "seo": {
+                    "type": "object",
+                    "properties": {
+                        "production_host": {
+                            "description": "Production host(s), e.g. \"www.example.com\". On any other host: noindex, nofollow (meta + X-Robots-Tag header) and no Google Tag; wprustycat_is_staging() returns true. Empty = nothing is done. Versioned in the theme on purpose: never store it in the database.",
+                            "type": ["string", "array"],
+                            "items": { "type": "string" },
+                            "default": ""
                         }
                     },
                     "additionalProperties": false
